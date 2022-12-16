@@ -5,6 +5,7 @@ import java.io.Console;
 public class Main {
   public static void main(String[] args) {
     
+    //Create a console
     Console cons = System.console();
     
     Boolean stop = false;
@@ -17,9 +18,11 @@ public class Main {
     
     while (!stop){
       String line = cons.readLine("> ");
+
+      //if user did not key in anything
       if(line.isEmpty()){
         System.out.println("You have not entered any operation.");
-      } else if (line.equals("exit")){
+      } else if (line.equals("exit")){ 
         System.out.println("Bye bye");
         stop=true;
       } else if (line.trim().split(" ").length==3){
@@ -46,21 +49,20 @@ public class Main {
         
         switch(operation){
           case "+":
-            System.out.println(number1 + number2);
             last = number1 + number2;
-
+            System.out.println(last);
             break;
           case "-":
-            System.out.println(number1 - number2);
             last = number1 - number2;
+            System.out.println(last);
             break;
           case "*":
-            System.out.println(number1 * number2);
             last = number1 * number2;
+            System.out.println(last);
             break;
           case "/":
-            System.out.println(number1 / number2);
             last = number1 / number2;
+            System.out.println(last);
             break;
           default:
             System.out.println("unknown operation");  
